@@ -1,0 +1,35 @@
+package com.laptrinhjavaweb.dao.impl;
+
+import java.util.List;
+
+import com.laptrinhjavaweb.dao.INewDAO;
+import com.laptrinhjavaweb.mapper.NewMapper;
+import com.laptrinhjavaweb.model.NewModel;
+
+public class NewDAO extends AbstractDAO<NewModel> implements INewDAO {
+	@Override
+	public List<NewModel> findByCategoryId(Long categoryId) {
+		String sql = "SELECT * FROM jspservletjdbc.news WHERE categoryid = ?";
+		return query(sql, new NewMapper(), categoryId);
+	}
+
+	@Override
+	public Long save(NewModel newModel) {
+		String sql = "INSERT INTO news(title,content,categoryId) VALUES (?,?,?)";
+		return insert(sql, newModel.getTitle(),newModel.getContent(),newModel.getCategoryId());
+	}
+
+	@Override
+	public void update(Long id) {
+		String sql = "UPDATE news SET title='Bai viet so 7' ,content='Noi dung bai viet so 7' WHERE id=?;";
+		update(sql, id);
+	}
+
+	@Override
+	public NewModel findOne(Long id) {
+		String sql = "SELECT * FROM jspservletjdbc.news WHERE id = ?";
+		List<NewModel> news =  query(sql, new NewMapper(), id);
+		return news.isEmpty() ? null : news.get(0);
+	}
+
+}

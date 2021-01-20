@@ -1,0 +1,34 @@
+package com.laptrinhjavaweb.controller.admin.api;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.laptrinhjavaweb.utils.HttpUtil;
+
+@WebServlet(urlPatterns = { "/api-admin-new" })
+public class NewAPI extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");//định dạng có thể gửi tiếng việt lên server
+		response.setContentType("application/json");//kiểu dl server trả về client để client hiểu
+		HttpUtil.of(request.getReader());
+	}
+	
+	protected void doPut(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+	
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+}

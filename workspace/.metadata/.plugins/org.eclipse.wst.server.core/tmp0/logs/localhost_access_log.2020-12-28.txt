@@ -1,0 +1,15 @@
+127.0.0.1 - - [28/Dec/2020:10:44:36 +0700] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:37 +0700] "GET /jdbc_12_2020/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:37 +0700] "GET /jdbc_12_2020/trang-chu;jsessionid=020C3D30FEF7F9EF9E96CCF3EF29002C HTTP/1.1" 200 7458
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:38 +0700] "GET /jdbc_12_2020/template/web/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:38 +0700] "GET /jdbc_12_2020/template/web/css/style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:38 +0700] "GET /jdbc_12_2020/template/web/jquery/jquery.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:38 +0700] "GET /jdbc_12_2020/template/web/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:44:38 +0700] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:46:31 +0700] "GET /jdbc_12_2020/trang-chu;jsessionid=020C3D30FEF7F9EF9E96CCF3EF29002C HTTP/1.1" 200 7458
+127.0.0.1 - - [28/Dec/2020:10:46:52 +0700] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:46:53 +0700] "GET /jdbc_12_2020/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:46:53 +0700] "GET /jdbc_12_2020/trang-chu HTTP/1.1" 200 7458
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:50:40 +0700] "GET /phpmyadmin/ HTTP/1.1" 404 1089
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:51:41 +0700] "GET /phpmyadmin/ HTTP/1.1" 404 1089
+0:0:0:0:0:0:0:1 - - [28/Dec/2020:10:53:14 +0700] "GET /phpmyadmin/db_structure.php?db=thuctap2 HTTP/1.1" 404 1105

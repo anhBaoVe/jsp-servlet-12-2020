@@ -1,0 +1,54 @@
+package com.laptrinhjavaweb.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.laptrinhjavaweb.model.NewModel;
+
+public class NewMapper implements RowMapper<NewModel> {
+
+	@Override
+	public NewModel mapRow(ResultSet rs) {
+		try {
+			NewModel news = new NewModel();
+			if (rs.getLong("id") != 0) {
+				news.setId(rs.getLong("id"));
+			}
+			if (rs.getString("title") != null) {
+				news.setTitle(rs.getString("title"));
+			}
+			if (rs.getString("content") != null) {
+				news.setContent(rs.getString("content"));
+			}
+			if (rs.getLong("categoryid") != 0) {
+				news.setCategoryId(rs.getLong("categoryid"));
+			}
+			if (rs.getString("shortdescription") != null) {
+				news.setShortDescription(rs.getString("shortdescription"));
+			}
+			if (rs.getString("thumbnail") != null) {
+				news.setThumbnail(rs.getString("thumbnail"));
+			}
+
+			news.setThumbnail(rs.getString("thumbnail"));
+			if (rs.getString("createby") != null) {
+				news.setCreateBy(rs.getString("createby"));
+			}
+			if (rs.getTimestamp("createddate") != null) {
+				news.setCreatedDate(rs.getTimestamp("createddate"));
+			}
+			if (rs.getString("modifielby") != null) {
+				news.setModifielBy(rs.getString("modifielby"));
+			}
+			if (rs.getTimestamp("modifileddate") != null) {
+				news.setModifiledDate(rs.getTimestamp("modifileddate"));
+			}
+
+			return news;
+		} catch (SQLException e) {
+			return null;
+		}
+
+	}
+
+}
